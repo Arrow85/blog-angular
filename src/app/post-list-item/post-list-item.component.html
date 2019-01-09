@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveIts > 0,
+                'list-group-item-danger': postLoveIts < 0}">
+  <div class="d-flex flex-row-reverse"><i>{{ postDate | date: 'short'}}</i></div>
+  <h4>{{ postTitle }}</h4>
+  <p>{{ postContent }}</p>
+  <div class="row">
+    <button type="button" class="btn btn-success" (click)="onLoveIts()">Love !!!</button>
+    <button type="button" class="btn btn-danger" (click)="onDontLoveIts()">Don't love !!!</button>
+    <h4 class="ml-2">{{ postLoveIts }}</h4>
+  </div>
+</li>
